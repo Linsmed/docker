@@ -20,7 +20,7 @@
 
 - View the contents of the cloned repository. You should see the following files and sub-directories.
 
-![](../docker/images/content.PNG)
+![](../Containerize-an-application//images/content.PNG)
 
 ##  Build the app's image
 
@@ -53,13 +53,13 @@ EXPOSE 3000`
 
 `cd /path/to/getting-started-app`
 
-![](../docker/images/direc.PNG)
+![](../Containerize-an-application/images/direc.PNG)
 
 
 ### Build the image.
 `docker build -t getting-started .`
 
-![](../docker/images/build-image.PNG)
+![](../Containerize-an-application//images/build-image.PNG)
 
 
 
@@ -69,14 +69,14 @@ EXPOSE 3000`
 you’re going to build the Docker image from it by
 typing the command . The output will
 look similar to this:
-![](../docker/images/docker-image.PNG)
+![](../Containerize-an-application/images/docker-image.PNG)
 
 ## STEP3 Running a Docker container
 - You’ve built and tagged your Docker image. Now you can run it as a container:
 
 ` docker run -i -t -p 8000:8000 --name example1 todoapp`
 
-![](../docker/images/docker-tag.PNG)   
+![](../Containerize-an-application//images/docker-tag.PNG)   
 
 - The docker build command uses the Dockerfile to build a new image. You might have noticed that Docker downloaded a lot of "layers". This is because you instructed the builder that you wanted to start from the node:18-alpine image. But, since you didn't have that on your machine, Docker needed to download the image.
 
@@ -100,17 +100,17 @@ look similar to this:
 
 - After a few seconds, open your web browser to [http://localhost:3000](http://localhost:3000/). You should see your app.
 
-![todolist](../docker/images/todolist.PNG)
+![todolist](../Containerize-an-application/images/todolist.PNG)
 
 
 - Add an item or two and see that it works as you expect. You can mark items as complete and remove them. Your frontend is successfully storing items in the backend.
 
-![](../docker/images/edited.PNG)
+![](../Containerize-an-application//images/edited.PNG)
 
 - If you take a quick look at your containers, you should see at least one container running that's using the getting-started image and on port 3000. To see your containers, you can use the CLI or Docker Desktop's graphical interface
 
 `sudo docker ps`
 - Output similar to the following should appear.
 
-![output](../docker/images/output.PNG)
+![output](../Containerize-an-application/images/output.PNG)
 
